@@ -152,6 +152,15 @@ type **yes** from the connect, and then type your ssh password by secrets of LIN
 <details>
     <summary>⚠ Warnings </summary>
 <br>
+    
+```py
+THIS IS ONLY FOR EDUCATIONAL PURPOSES
+
+DON'T USE FOR MINING OR ILLEGAL USE
+
+DON'T RECODE THIS SC!
+```
+    
 - Reminders:
 :warning: Dont close this windows which called "**provisioner.exe**", it will cause the windows system process to be stopped and disconnect from Windows RDP.
 <img src="https://raw.githubusercontent.com/RealKoolisw/image/main/VirtualMachine-GHAction/sceenshots/9a56f43b-0734-4186-b619-1588c208eb05.png">
@@ -160,4 +169,7 @@ type **yes** from the connect, and then type your ssh password by secrets of LIN
 <img src="https://raw.githubusercontent.com/RealKoolisw/image/main/VirtualMachine-GHAction/sceenshots/Screenshot%202021-02-23%20at%207.35.57%20AM.png">
 </details>
 
+---
+
+### Main Repository : https://github.com/proavipatil/AviRDP
 
