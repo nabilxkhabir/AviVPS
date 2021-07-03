@@ -8,7 +8,7 @@
 ## Setting up:
 1. Fork this project
 2. Go to your peoject page, click `Settings` and go to `Secrets`, and then click `New Secret` to add these secrets below:
-3. Username For Windows RDP is `Administrator`
+3. Username For Windows RDP is `runneradmin`
 
 Secrets Name | Uses | Notes
 ----- | ----- | -----
@@ -50,7 +50,7 @@ Secrets Name | Uses | Notes
 1. First, start the actions of Windows 10 System.    
 2. Second, Go to https://dashboard.ngrok.com/status/tunnels and check if theres a one online tunnel running.
 3. Go to Windows Remote Desktop Connection app or Microsoft Remote Desktop software to connect to windows 10 VPS.
-4. Username For Windows RDP is `Administrator`
+4. Username For Windows RDP is `runneradmin`
 5. ENJOY!
 
 </details>
