@@ -17,17 +17,20 @@ jobs:
         WINDOWS_USER_PASSWORD: ${{ secrets.WINDOWS_USER_PASSWORD }}
     - name: Download
       run: |
-       Invoke-WebRequest https://drive.google.com/file/d/1Gg_nLZs28-dw8yLdj-ks173PW9Us4Sxr/view?usp=sharing -OutFile ngrok.exe
+       Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
        Invoke-WebRequest https://drive.google.com/file/d/18-RixASBpCMxorOEiloQ7uZDjFz4X0w_/view?usp=sharing -OutFile nssm.exe
        Invoke-WebRequest https://raw.githubusercontent.com/arurdpsha/AviVPS/main/resources/ngrok-user.bat -OutFile ngrok-user.bat
        Invoke-WebRequest https://raw.githubusercontent.com/arurdpsha/AviVPS/main/resources/ngrok-start.bat -OutFile ngrok-start.bat
        Invoke-WebRequest https://raw.githubusercontent.com/arurdpsha/AviVPS/main/resources/ngrok-loop.bat -OutFile ngrok-loop.bat
-    - name: Copy NSSM & Ngrok to Windows Directory.
+       
+   - name: Extracting Ngrok File.
+      run: Expand-Archive ngrok.zip
+      
+   - name: Copy NSSM & Ngrok to Windows Directory.
       run: | 
         copy nssm.exe C:\Windows\System32
-        copy ngrok.exe C:\Windows\System32
     - name: Auth
-      run: .\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
+      run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
       env:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
     - name: Installing Ngrok Process as a Windows Core Services
