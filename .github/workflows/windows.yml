@@ -42,7 +42,7 @@ jobs:
     - name: Setting up RDP TCP UserAuthentication
       run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
     - name: Create Tunnel
-      run: sc start ngrok
+      run: sc start \ngrok\ngrok
     - name: Connecting Process
       run: cmd /c ngrok-user.bat
     - name: Looping Process
